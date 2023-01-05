@@ -1,0 +1,10 @@
+.DogList-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.img-sm {
+  height: 200px;
+  margin: 15px;
+}

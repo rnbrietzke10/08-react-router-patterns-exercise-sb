@@ -7,6 +7,8 @@ import whiskey from './images/whiskey.jpg';
 import duke from './images/duke.jpg';
 import perry from './images/perry.jpg';
 import tubby from './images/tubby.jpg';
+import DogDetails from './DogDetails';
+import DogsList from './DogsList';
 App.defaultProps = {
   dogs: [
     {
@@ -56,11 +58,21 @@ App.defaultProps = {
   ],
 };
 function App({ dogs }) {
-  console.log(dogs);
   return (
     <div className="App">
       <NavBar dogs={dogs} />
-      <div>Dogs</div>
+      <Routes>
+        <Route path="/dogs" element={<DogsList dogs={dogs} />}></Route>
+        {dogs.map((dog) => {
+          return (
+            <Route
+              key={dog.id}
+              path={`dogs/${dog.name}`}
+              element={<DogDetails dog={dog} />}
+            ></Route>
+          );
+        })}
+      </Routes>
     </div>
   );
 }

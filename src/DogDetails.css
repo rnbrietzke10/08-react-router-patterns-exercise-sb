@@ -1,0 +1,23 @@
+.DogDetails-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.DogDetails-container-info {
+  width: 300px;
+  text-align: left;
+  margin-right: 30px;
+}
+
+.DogDetails-info {
+  margin-bottom: 10px;
+}
+
+li {
+  margin-left: 45px;
+}
+
+.img-lg {
+  height: 300px;
+}
