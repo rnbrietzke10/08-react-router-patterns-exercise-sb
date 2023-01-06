@@ -72,6 +72,7 @@ function App({ dogs }) {
             ></Route>
           );
         })}
+        <Route path="*" element={<DogsList dogs={dogs} />} />
       </Routes>
     </div>
   );
